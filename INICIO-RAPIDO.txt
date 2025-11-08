@@ -1,0 +1,33 @@
+═══════════════════════════════════════════════════════════════
+  🚀 CÓMO INICIAR LA APLICACIÓN - CONTROL DE EMBARAZO
+═══════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANTE: NO puedes abrir el archivo index.html directamente
+   Esta aplicación necesita el servidor de desarrollo de Vite.
+
+═══════════════════════════════════════════════════════════════
+
+PASOS PARA INICIAR:
+
+1. Abre una terminal (PowerShell o CMD) en esta carpeta:
+   "C:\Users\USUARIO\Desktop\CONTROL DE EMBARAZO"
+
+2. Ejecuta el siguiente comando:
+   npm run dev
+
+3. Espera a que aparezca un mensaje como:
+   "Local:   http://localhost:5173/"
+   
+4. Abre tu navegador y ve a:
+   http://localhost:5173
+
+═══════════════════════════════════════════════════════════════
+
+Si aparece un error, verifica que hayas instalado las dependencias:
+
+   npm install
+
+═══════════════════════════════════════════════════════════════
+
+¡Listo! La aplicación debería funcionar correctamente.
+

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control de Embarazo - Diana Navas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Script para añadir datos de prueba si no existen citas médicas
+      (function() {
+        try {
+          const citasMedicas = localStorage.getItem('citas_medicas');
+          
+          // Solo crear datos de prueba si no hay citas guardadas
+          if (!citasMedicas || citasMedicas === '[]' || citasMedicas === 'null') {
+            // Crear una cita para mañana
+            const manana = new Date();
+            manana.setDate(manana.getDate() + 1);
+            
+            const fechaManana = manana.toISOString().split('T')[0]; // Formato YYYY-MM-DD
+            const horaPrueba = '10:00'; // Hora de ejemplo
+            
+            const citaPrueba = {
+              id: Date.now().toString(),
+              fecha: fechaManana,
+              hora: horaPrueba,
+              medico: 'Dr. Juan Pérez',
+              lugar: 'Clínica San José',
+              notas: 'Cita de control prenatal'
+            };
+            
+            const citas = [citaPrueba];
+            localStorage.setItem('citas_medicas', JSON.stringify(citas));
+            console.log('💛 Datos de prueba creados: Cita para mañana a las', horaPrueba);
+          }
+        } catch (error) {
+          console.error('Error al crear datos de prueba:', error);
+        }
+      })();
+    </script>
+  </body>
+</html>
+
